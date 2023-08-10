@@ -91,12 +91,13 @@ body{
     font-weight: bold;
 }
 #keyboard{
-    position: absolute;
-    left: 242px;
-    top: 673px;
     width: 440px;
     height: 190px;
     text-align: center;
+    border: #1b998b 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
 }
 #keyboard .key{
     border: 3px outset #ed217c;
@@ -116,8 +117,18 @@ body{
 .right-side{
     width: 30%;
 }
-as
-aside p{
+.remaining-attemps{
+    border: #1b998b 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 40px 20px 20px;
+}
+.draw{
+    border: #1b998b 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 40px 20px 20px;
+    height: 40vh;
 }
 
 
