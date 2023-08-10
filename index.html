@@ -1,0 +1,109 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- TYPOGRAPHY -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Preahvihear&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- TITLE -->
+        <title>Juego del ahorcado</title>
+    </head>
+    <body>
+        <div id="title">
+            <h1>EL AHORCADO</h1>
+            <h2>Intentá adivinar la palabra!</h2>
+        </div>
+        <div id="container">
+            <div id="categorie">
+                <p>Libros - literatura</p>
+            </div>
+
+            <div  class="container-two">
+                <div class="left-side">
+                    <div class="row">
+                        <div id="words" class="col">
+                            <span>_</span>
+                            <span>_</span>
+                            <span>_</span>
+                            <span>_</span>
+                            <span>_</span>
+                            <span>_</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="usedLetters" class="col">
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="keyboard" class="col">
+                            <button type="button" class="key" value="Q">Q</button>
+                            <button type="button" class="key" value="Q">W</button>
+                            <button type="button" class="key" value="Q">E</button>
+                            <button type="button" class="key" value="Q">R</button>
+                            <button type="button" class="key" value="Q">T</button>
+                            <button type="button" class="key" value="Q">Y</button>
+                            <button type="button" class="key" value="Q">U</button>
+                            <button type="button" class="key" value="Q">I</button>
+                            <button type="button" class="key" value="Q">O</button>
+                            <button type="button" class="key" value="Q">P</button>
+                            <button type="button" class="key" value="Q">A</button>
+                            <button type="button" class="key" value="Q">S</button>
+                            <button type="button" class="key" value="Q">D</button>
+                            <button type="button" class="key" value="Q">F</button>
+                            <button type="button" class="key" value="Q">G</button>
+                            <button type="button" class="key" value="Q">H</button>
+                            <button type="button" class="key" value="Q">J</button>
+                            <button type="button" class="key" value="Q">K</button>
+                            <button type="button" class="key" value="Q">L</button>
+                            <button type="button" class="key" value="Q">Z</button>
+                            <button type="button" class="key" value="Q">X</button>
+                            <button type="button" class="key" value="Q">C</button>
+                            <button type="button" class="key" value="Q">V</button>
+                            <button type="button" class="key" value="Q">B</button>
+                            <button type="button" class="key" value="Q">N</button>
+                            <button type="button" class="key" value="Q">M</button>
+    
+                            
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <aside>
+                        <p>Intentos restantes: <span id="remaining-attemps">6</span></p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda quod dolor repellat facere repellendus alias id quia. A earum eius inventore, facilis magni expedita minus fuga, excepturi sed quis ipsa!</p>
+                    </aside>
+                </div>
+                
+            </div>
+            
+
+
+
+
+
+            
+            
+            
+        </div>
+        
+        
+
+
+
+
+
+        <!-- contador de 2 minutos para resolver
+        lineas de la palabra
+        letras ya usadas
+        teclado abajo con botones con letras
+        se va formando el dibujito del ahorcado
+        cuando se acaban los intentos que son 10, aparece cartel que diga: Se terminaron los intentos! y un boton que diga empezar de nuevo -->
+        <!-- JS -->
+        <script src="./js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+body{
+    background-color: #ff9b71;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+}
+#title h1{
+    font-family: 'Preahvihear';
+    font-size: 60px;
+    color: #1b998b;
+}
+#title h2{
+    color: #ed217c;
+}
+
+#container{
+    background-color: #fffd82;
+    margin: 60px;
+    border-radius: 10px;
+}
+#categorie p{
+    display: flex;
+    justify-content: end;
+    margin: 20px 40px 20px 0px;
+    font-weight: bold;
+}
+#categorie{
+    background-color: #ed217c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+}
+.container-two{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.container-two .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+}
+.container-two .col{
+    flex: 1;
+    text-align: center;
+}
+#words{
+    border: #1b998b 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 100px 30px 100px;
+    height: 170px;
+    width: 80%;
+    border-radius: 5px;
+}
+#words span {
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    display: inline-block;
+    margin: 60 5px 30px 5px;
+}
+#usedLetters{
+    border: #1b998b 2px solid;
+    margin: 30px 100px 30px 100px;
+    position: absolute;
+    width: 420px;
+    height: 30px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 26px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#keyboard{
+    position: absolute;
+    left: 242px;
+    top: 673px;
+    width: 440px;
+    height: 190px;
+    text-align: center;
+}
+#keyboard .key{
+    border: 3px outset #ed217c;
+    background-color: #ed217c;
+    color: #fffd82;
+    font-size: 26px;
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    text-align: center;
+    text-indent: -1px;
+    border-radius: 8px;
+}
+.left-side{
+    width: 70%;
+}
+.right-side{
+    width: 30%;
+}
+as
+aside p{
+}
+
+
+
+
+
+/* 
+
+
+
+
+aside {
+    /* flex: 0 0 30%; /* Ancho fijo para el aside */
+    /* padding: 20px;
+    background-color: #e0e0e0;
+}
+
+aside p {
+    margin: 0;
+} */
