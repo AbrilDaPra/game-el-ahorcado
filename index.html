@@ -66,12 +66,22 @@
                 </div>
                 <div class="right-side">
                     <aside>
-                        <p class="remaining-attemps">Intentos restantes: <span id="remainingAttemps">6</span></p>
-                        <p class="draw"></p>
+                        <p class="remaining-attempts">Intentos restantes: <span id="remainingAttempts">6</span></p>
+                        <div id="hangman" class="hangman">
+                        </div>
                     </aside>
                 </div>
                 
             </div>
+
+            <div id="lostModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                    <p>Te quedaste sin intentos. ¡Perdiste!</p>
+                    <button>EMPEZAR DE NUEVO</button>
+                </div>
+            </div>
+            
         </div>
         
         

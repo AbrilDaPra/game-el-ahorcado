@@ -22,44 +22,61 @@ elementCategorie.querySelector("p").textContent = randomCategorie.categorie;
 let elementWords = document.getElementById("words");
 elementWords.innerHTML = "";
 
+let guessedLetters = new Set();
+let incorrectLetters = new Set();
+let elementKeyboard = document.getElementById("keyboard");
+let elementIncorrectLetters = document.getElementById("incorrectLetters");
+
+let remainingAttempts = 8;
+let elementRemainingAttempts = document.getElementById("remainingAttempts");
+
+let lostModal = document.getElementById("lostModal");
+let closeModal = document.querySelector(".close");
+let lostMessage = document.querySelector("#lostModal .modal-content p");
+
+let incorrectAttempts = 0;
+let hangmanSteps = [
+    "O",
+    "|<br>|",
+    "/<br>",
+    "\\<br>",
+];
+let hangmanElement = document.getElementById("hangman");
+
 for (let i = 0; i < randomWord.length; i++) {
     elementWords.innerHTML += "<span>_</span>";
 }
 
-let guessedLetters = new Set();
-let elementKeyboard = document.getElementById("keyboard");
-
 elementKeyboard.addEventListener("click", (event) => {
-    if (event.target.tagName === "BUTTON") {
+    if (event.target.tagName === "BUTTON" && remainingAttempts > 0) {
         let letter = event.target.value;
         
-        if (randomWord.includes(letter)) {
+        if (!guessedLetters.has(letter)) {
             guessedLetters.add(letter);
 
-            for (let i = 0; i < randomWord.length; i++) {
-                if (randomWord[i] === letter) {
-                    elementWords.children[i].textContent = letter;
+            if (randomWord.includes(letter)) {
+                for (let i = 0; i < randomWord.length; i++) {
+                    if (randomWord[i] === letter) {
+                        elementWords.children[i].textContent = letter;
+                    }
+                }
+            } else {
+                incorrectLetters.add(letter);
+                elementIncorrectLetters.textContent = Array.from(incorrectLetters).join(" ");
+                remainingAttempts--;
+                elementRemainingAttempts.textContent = remainingAttempts;
+
+                if (remainingAttempts === 0) {
+                    lostModal.classList.add("modal");
+                } else {
+                    incorrectAttempts++;
+                    hangmanElement.innerHTML = hangmanSteps.slice(0, incorrectAttempts).join("<br>");
                 }
             }
         }
     }
 });
 
-let elementIncorrectLetters = document.getElementById("incorrectLetters");
-
-elementKeyboard.addEventListener("click", (event) => {
-    if (event.target.tagName === "BUTTON") {
-        let letter = event.target.value;
-
-        if (!randomWord.includes(letter) && !guessedLetters.has(letter)) {
-            guessedLetters.add(letter);
-            elementIncorrectLetters.textContent += letter + " ";
-        } else if (randomWord.includes(letter)) {
-            for (let i = 0; i < randomWord.length; i++) {
-                if (randomWord[i] === letter) {
-                    elementWords.children[i].textContent = letter;
-                }
-            }
-        }
-    }
+closeModal.addEventListener("click", () => {
+    lostModal.classList.remove("modal");
 });
